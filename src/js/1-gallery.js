@@ -70,7 +70,6 @@ const images = [
   },
 ];
 
-// HTML генерація
 function createMarkup({ preview, original, description }) {
   return `
     <li class="gallery-item">
@@ -87,8 +86,7 @@ function createMarkup({ preview, original, description }) {
 
 galleryElem.innerHTML = images.map(createMarkup).join('');
 
-// Ініціалізація SimpleLightbox
-const lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.js-gallery a', {
   captions: true,
   captionsData: 'alt',
   captionDelay: 250,
